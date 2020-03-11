@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Table from './table';
-
+import App from './app'
 
 // Render the main component
 ReactDOM.render(
-  <Table/>,
+  <App />,
   document.getElementById('reactEntry'),
 );
