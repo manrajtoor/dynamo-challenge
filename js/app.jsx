@@ -21,10 +21,10 @@ class App extends React.Component {
         if (data.status !== 'success') throw Error('Failed API Fetch');
         else {
           // Get object keys for header of table
-          var keys = Object.keys(data.data[0]);
+          const keys = Object.keys(data.data[0]);
           this.setState({
             employees: data.data,
-            keys: keys
+            keys: keys,
           });
         }
       })
@@ -35,7 +35,7 @@ class App extends React.Component {
     // Generate table
     return (
       <div className="center">
-        <Table employees={this.state.employees} keys={this.state.keys}/>
+        <Table employees={this.state.employees} keys={this.state.keys} />
       </div>
     );
   }
